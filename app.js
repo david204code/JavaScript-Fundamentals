@@ -1,3 +1,9 @@
-document.write('Jesus Christ')
-// alert('You are Lord!')
-console.log("In Your time")
+// function example, invoke, and pass in parameter
+
+function hello(phrase) {
+  console.log(phrase + " David Wu");
+}
+
+hello("Seek ye First,");
+hello("Love the Lord your God,");
+hello("Humble yourself,");
