@@ -1,17 +1,17 @@
-// function returns
+// function expression
 
-const wallHeight = 80;
-
-function calculate(value) {
-  // local variable
-  const newValue = value * 2.54;
-  console.log("The value in cm is: " + value * 2.54 + " cm");
-  return newValue;
+function addValues(num1, num2) {
+  return num1 + num2;
 }
 
-// call the function
-const width = calculate(100);
-const height = calculate(wallHeight);
+const firstValue = addValues(3, 4);
+const secondValue = addValues(12, 34);
 
-const dimension = [width, height];
-console.log(dimension);
+// function expression example
+const add = function (num1, num2) {
+  return num1 + num2;
+};
+// use the anonymous function
+const thirdValue = add(5, 6);
+const values = [firstValue, secondValue, add(5, 6)];
+console.log(values);
