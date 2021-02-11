@@ -1,17 +1,14 @@
-// function expression
+// objects examples
+// key/value pairs method
+// dot notation
 
-function addValues(num1, num2) {
-  return num1 + num2;
-}
-
-const firstValue = addValues(3, 4);
-const secondValue = addValues(12, 34);
-
-// function expression example
-const add = function (num1, num2) {
-  return num1 + num2;
+const person = {
+  name: "David",
+  lastName: "Wu",
+  praise() {
+    console.log("David, Praise the Lord!");
+  },
 };
-// use the anonymous function
-const thirdValue = add(5, 6);
-const values = [firstValue, secondValue, add(5, 6)];
-console.log(values);
+
+console.log(person);
+person.praise();
