@@ -1,14 +1,17 @@
-// objects examples
-// key/value pairs method
-// dot notation
+// Arrays and for loop
 
-const person = {
-  name: "David",
-  lastName: "Wu",
-  praise() {
-    console.log("David, Praise the Lord!");
-  },
-};
+const names = ["Peter", "James", "John", "Mark"];
+const lastName = "Disciple";
+let newArray = [];
 
-console.log(person);
-person.praise();
+// for loop
+for (let i = 0; i < names.length; i++) {
+  console.log(i);
+  console.log(names[i]);
+  // newArray.push(`${names[i]} ${lastName}`);
+  const fullName = `${names[i]} ${lastName}`;
+  newArray.push(fullName);
+}
+
+console.log(names);
+console.log(newArray);
