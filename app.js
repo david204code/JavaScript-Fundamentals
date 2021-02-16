@@ -1,31 +1,29 @@
-// Functions, return, if, arrays, for loop
+// callback function. higher order
 
-const gas = [20, 40, 100, 30];
-const food = [10, 40, 50];
-
-function calculateTotal(arr) {
-  let total = 0;
-  for (let i = 0; i < arr.length; i++) {
-    // console.log(arr[i]);
-    total += arr[i];
-  }
-  if (total > 100) {
-    console.log(`Whoa overspending!`);
-    // break out of the function by setting up a return inside this if statemetn
-    return total;
-  }
-  console.log(`Total is less than 100`);
-  return total;
-  // console.log(total);
+// callback function
+function morning(name) {
+  return `Good morning ${name.toUpperCase()}`;
+}
+function afternoon(name) {
+  return `Good afternoon ${name.toUpperCase()}`;
 }
 
-const gasTotal = calculateTotal(gas);
-const foodTotal = calculateTotal(food);
-const randomTotal = calculateTotal([2004, 2008, 2009, 2010, 2013]);
+// higher order function is the one that accepts the function
+function greet(name, cb) {
+  const myName = "David";
+  console.log(`${cb(name)}, my name is ${myName}`);
+}
 
-// pass in object for console log
-console.log({
-  gas: gasTotal,
-  food: foodTotal,
-  random: randomTotal,
-});
+// pass in the function but not invoked the funciton
+greet("Lord", morning);
+greet("almighty", afternoon);
+
+// function greetMorning(name) {
+//   const myName = "David";
+//   console.log(`Good morning ${name}, my name is ${myName}`);
+// }
+
+// function greetAfternoon(name) {
+//   const myName = "David";
+//   console.log(`Good Afternoon ${name}, my name is ${myName}`);
+// }
