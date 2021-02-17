@@ -8,9 +8,14 @@ const people = [
 ];
 
 // call back function
-function showPerson(person) {
-  console.log(person);
-}
+// function showPerson(person) {
+//   console.log(person);
+// }
 
 // calling the forEach() method
-people.forEach(showPerson);
+// people.forEach(showPerson);
+
+// set up anonymous function and pass the callback function directly
+people.forEach(function (item) {
+  console.log(item);
+});
