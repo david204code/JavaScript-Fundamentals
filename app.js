@@ -1,5 +1,5 @@
-// forEach
-// does not return new array
+// map function
+// return a new array
 
 const people = [
   { name: "David", age: 26, position: "Worshipper" },
@@ -7,15 +7,24 @@ const people = [
   { name: "David Wu", age: 15, position: "Child of God" },
 ];
 
-// call back function
-// function showPerson(person) {
-//   console.log(person);
-// }
-
-// calling the forEach() method
-// people.forEach(showPerson);
-
-// set up anonymous function and pass the callback function directly
-people.forEach(function (item) {
-  console.log(item);
+const ages = people.map(function (person) {
+  console.log(person);
+  return `I am ${person.position}`;
 });
+
+// return an object
+const newPeople = people.map(function (person) {
+  return {
+    firstName: person.name.toUpperCase(),
+    oldAge: person.age + 20,
+  };
+});
+
+// display on screen
+const names = people.map(function (person) {
+  return `<h1>${person.name}</h1>`;
+});
+
+document.body.innerHTML = names.join("");
+
+console.log(names);
