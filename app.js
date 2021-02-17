@@ -10,9 +10,24 @@ const people = [
   { name: "Mr David Wu", age: 19, position: "Seeker", id: 4 },
 ];
 
+const names = ["Matthew", "Mark", "Luke"];
+
+console.log(
+  names.find(function (name) {
+    return name === "Matthew";
+  })
+);
+
 const person = people.find(function (person) {
   // add the condition
   return person.id === 4;
 });
 
 console.log(person);
+
+const person1 = people.filter(function (person) {
+  // add the condition
+  return person.id === 4;
+});
+
+console.log(person1[0]);
