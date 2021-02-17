@@ -1,30 +1,22 @@
-// map function
-// return a new array
+// filter function
+// return a new array and can change the size of the new array
+// return based on condition
 
 const people = [
   { name: "David", age: 26, position: "Worshipper" },
   { name: "Wu", age: 23, position: "Believer" },
   { name: "David Wu", age: 15, position: "Child of God" },
+  { name: "Mr David Wu", age: 19, position: "Seeker" },
 ];
 
-const ages = people.map(function (person) {
-  console.log(person);
-  return `I am ${person.position}`;
+const youngPeople = people.filter(function (person) {
+  // return condition
+  return person.age <= 20;
 });
 
-// return an object
-const newPeople = people.map(function (person) {
-  return {
-    firstName: person.name.toUpperCase(),
-    oldAge: person.age + 20,
-  };
+const myJob = people.filter(function (person) {
+  return person.position === "Worshipper";
 });
 
-// display on screen
-const names = people.map(function (person) {
-  return `<h1>${person.name}</h1>`;
-});
-
-document.body.innerHTML = names.join("");
-
-console.log(names);
+console.log(youngPeople);
+console.log(myJob);
