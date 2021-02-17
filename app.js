@@ -1,22 +1,18 @@
-// filter function
-// return a new array and can change the size of the new array
-// return based on condition
+// find function
+// returns single instances/single object
+// return first match, if no match than undefined
+// great for getting unique value
 
 const people = [
-  { name: "David", age: 26, position: "Worshipper" },
-  { name: "Wu", age: 23, position: "Believer" },
-  { name: "David Wu", age: 15, position: "Child of God" },
-  { name: "Mr David Wu", age: 19, position: "Seeker" },
+  { name: "David", age: 26, position: "Worshipper", id: 1 },
+  { name: "Wu", age: 23, position: "Believer", id: 2 },
+  { name: "David Wu", age: 15, position: "Child of God", id: 3 },
+  { name: "Mr David Wu", age: 19, position: "Seeker", id: 4 },
 ];
 
-const youngPeople = people.filter(function (person) {
-  // return condition
-  return person.age <= 20;
+const person = people.find(function (person) {
+  // add the condition
+  return person.id === 4;
 });
 
-const myJob = people.filter(function (person) {
-  return person.position === "Worshipper";
-});
-
-console.log(youngPeople);
-console.log(myJob);
+console.log(person);
