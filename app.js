@@ -1,29 +1,19 @@
-// reduce method
-// still iterates over the array, callback function, 2 parameters
-// reduces the value in the array to a single value = number, array, object
-// in the callback function 1st parameter ('acc') - total of all calculation
-// in the call back funtion 2nd paramter ('curr') - current iteration/value
+// JavaScript built in Math object
 
-const people = [
-  { name: "David", age: 26, position: "Worshipper", id: 1, salary: 200 },
-  { name: "Wu", age: 23, position: "Believer", id: 2, salary: 300 },
-  { name: "David Wu", age: 15, position: "Child of God", id: 3, salary: 500 },
-  { name: "Mr David Wu", age: 19, position: "Seeker", id: 4, salary: 500 },
-];
+// const number = 4.6897;
+// const result = Math.floor(number);
 
-const total = people.reduce(
-  function (acc, currItem) {
-    console.log(`total: ${acc}`);
-    console.log(`current money : ${currItem.salary} `);
+// const number = 6.8367;
+// const result = Math.ceil(number);
 
-    // the functionality
-    acc += currItem.salary;
+// const number = 81;
+// const result = Math.sqrt(number);
 
-    // must alway return acc, the first total
-    return acc;
-  },
-  // initial value in the loop
-  0
-);
+// const result = Math.PI;
+// const result = Math.min(2, 3, 8, 99, 200);
+// const result = Math.max(2, 3, 8, 99, 200);
 
-console.log(total);
+// random number between 1 to 10
+const result = Math.floor(Math.random() * 10 + 1);
+
+console.log(result);
