@@ -1,19 +1,43 @@
-// JavaScript built in Math object
+// JavaScript built in data object
 
-// const number = 4.6897;
-// const result = Math.floor(number);
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
 
-// const number = 6.8367;
-// const result = Math.ceil(number);
+const days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
 
-// const number = 81;
-// const result = Math.sqrt(number);
+// need to set the Date object for it to be invoked
+const date = new Date();
 
-// const result = Math.PI;
-// const result = Math.min(2, 3, 8, 99, 200);
-// const result = Math.max(2, 3, 8, 99, 200);
+const month = months[date.getMonth()];
+const day = days[date.getDay()];
 
-// random number between 1 to 10
-const result = Math.floor(Math.random() * 10 + 1);
+// console.log(date.getDate());
+// console.log(date.getFullYear());
 
-console.log(result);
+const sentence = `Today's date is ${date.getDate()} of ${
+  months[date.getMonth()]
+} ${date.getFullYear()}`;
+
+console.log(sentence);
+
+document.body.innerHTML = sentence;
