@@ -1,8 +1,23 @@
-// getElementByClassName
+// QuerySelector and QuerySelectorAll
+// Select the element or group of elements
+// Decide the effect we want to apply to the selection
 
-// getElementByClassName('classname')
+// querySelector('any css'); selects single, selecting the first element
+// querySelectorAll('any css') - select all, the whole list can use the forEach() method
 
-const listItems = document.getElementsByClassName("special");
+// # for id and . for class
+const result = document.querySelector("#result");
+result.style.backgroundColor = "blue";
 
-// console.log(listItems);
-listItems[3].style.color = "red";
+const item = document.querySelector(".special");
+// console.log(item);
+
+const lastItem = document.querySelector("li:last-child");
+// console.log(lastItem);
+
+const list = document.querySelectorAll(".special");
+// console.log(list);
+list.forEach(function (item) {
+  console.log(item);
+  item.style.color = "yellow";
+});
