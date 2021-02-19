@@ -1,43 +1,9 @@
-// JavaScript built in data object
+// getElementById method
 
-const months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
+// getElementById('element')
 
-const days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
+const h1 = document.getElementById("title");
+h1.style.color = "red";
 
-// need to set the Date object for it to be invoked
-const date = new Date();
-
-const month = months[date.getMonth()];
-const day = days[date.getDay()];
-
-// console.log(date.getDate());
-// console.log(date.getFullYear());
-
-const sentence = `Today's date is ${date.getDate()} of ${
-  months[date.getMonth()]
-} ${date.getFullYear()}`;
-
-console.log(sentence);
-
-document.body.innerHTML = sentence;
+document.getElementById("btn").style.backgroundColor = "blue";
+document.getElementById("btn").style.color = "white";
