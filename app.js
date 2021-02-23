@@ -1,21 +1,15 @@
-// nagivate the DOM children
+// parentElement
+// going upwards
 
-// childNodes
-// children
-// firstChild
-// lastChild
+const heading = document.querySelector("h2");
+// parentElement method!
+// console.log(heading.parentElement);
+// console.log(heading.parentElement.parentElement);
+// console.log(heading.parentElement.parentElement.parentElement);
+// console.log(heading.parentElement.parentElement.parentElement.parentElement);
+// console.log(
+//   heading.parentElement.parentElement.parentElement.parentElement.parentElement
+// );
 
-const result = document.querySelector("#result");
-
-// select the children, use the childNodes and childNotes return whitespace which is treated as text node
-const allChildren = result.childNodes;
-console.log(allChildren);
-
-// children, take out the whitespace
-const children = result.children;
-console.log(children);
-
-// firstChild - still will have the whitespace as text node
-console.log(result.firstChild);
-// lastChild - still will have the whitespace as text node
-console.log(result.lastChild);
+const parent = heading.parentElement;
+parent.style.color = "red";
