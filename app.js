@@ -1,15 +1,15 @@
-// parentElement
-// going upwards
+// previousSibling will return whitespace
+// nextSibling will return whitespace
+// return whitespace
 
-const heading = document.querySelector("h2");
-// parentElement method!
-// console.log(heading.parentElement);
-// console.log(heading.parentElement.parentElement);
-// console.log(heading.parentElement.parentElement.parentElement);
-// console.log(heading.parentElement.parentElement.parentElement.parentElement);
-// console.log(
-//   heading.parentElement.parentElement.parentElement.parentElement.parentElement
-// );
+const first = document.querySelector(".first");
+// console.log(first);
 
-const parent = heading.parentElement;
-parent.style.color = "red";
+// look for the next sibling of first
+const second = (first.nextSibling.nextSibling.style.color = "red");
+// console.log(second);
+
+const last = document.querySelector("#last");
+// console.log(last);
+const third = last.previousSibling.previousSibling;
+console.log(third);
