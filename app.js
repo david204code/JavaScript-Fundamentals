@@ -1,11 +1,9 @@
-// previousElementSibling
-// nextElementSibling
+// nodeValue
+// textContent
 
-// don't need to worry about whitespace
+const item = document.getElementById("special");
+const value = item.firstChild.nodeValue;
+// console.log(value);
 
-const first = document.querySelector(".first");
-// console.log(first.nextElementSibling);
-first.nextElementSibling.style.color = "red";
-
-const last = document.querySelector("#last");
-last.previousElementSibling.style.color = "orange";
+const easyValue = item.textContent;
+console.log(easyValue);
