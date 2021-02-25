@@ -5,6 +5,8 @@
 // insertBefore('element', 'location')
 // still need to use createElement and createTextNode
 
+// replaceChild('child', 'old')
+
 const result = document.querySelector("#result");
 const first = document.querySelector(".red");
 
@@ -23,5 +25,13 @@ heading.appendChild(headingText);
 // add the class
 heading.classList.add("blue");
 result.insertBefore(heading, first);
+
+const smallHeading = document.createElement("h6");
+const smallText = document.createTextNode(
+  `And we know in all things God works for the good of those who love him, who have been called according to his purpose`
+);
+smallHeading.classList.add("red");
+smallHeading.appendChild(smallText);
+document.body.replaceChild(smallHeading, bodyDiv);
 
 console.log(result.children);
