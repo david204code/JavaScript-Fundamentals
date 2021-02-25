@@ -1,6 +1,8 @@
-// prepend
-// innerText
+// remove
+// removeChild
 
-const heading = document.createElement("h2");
-heading.innerText = `In the begining was the Word, the Word was with God and the Word was God.`;
-document.body.prepend(heading);
+const result = document.querySelector("#result");
+// result.remove();
+const heading = result.querySelector("h1");
+result.removeChild(heading);
+console.log(result);
