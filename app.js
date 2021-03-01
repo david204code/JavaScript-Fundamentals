@@ -1,30 +1,28 @@
-// select the element
-// addEventListener()
-// which event  and the respond
+// mousedown - button is pressed
+// mouseup - button is released
+// click - fires after full actions occurs
+// mouseenter - moved onto an element
+// mouseleave - moved out of an element
 
+const heading = document.querySelector("h1");
 const btn = document.querySelector(".btn");
 
-// select the heading
-const heading = document.querySelector("h2");
+btn.addEventListener("click", function () {
+  console.log("You are prayed");
+});
 
-function changeColors() {
-  // console.log("New life, spring of living water");
-  // does the heading contains the class of red
-  let hasClass = heading.classList.contains("red");
-  if (hasClass) {
-    // remove the class
-    heading.classList.remove("red");
-  } else {
-    heading.classList.add("red");
-  }
-}
+btn.addEventListener("mousedown", function () {
+  console.log("head down");
+});
 
-// // first: pass in the event, second: pass in the call back function
-// btn.addEventListener("click", function () {
-//   // console.log("The best decision");
-//   // add a class when the button is click
-//   heading.classList.add("red");
-// });
+btn.addEventListener("mouseup", function () {
+  console.log("hearts lifted up");
+});
 
-// passing in as reference
-btn.addEventListener("click", changeColors);
+heading.addEventListener("mouseenter", function () {
+  heading.classList.add("blue");
+});
+
+heading.addEventListener("mouseleave", function () {
+  heading.classList.remove("blue");
+});
