@@ -1,28 +1,18 @@
-// mousedown - button is pressed
-// mouseup - button is released
-// click - fires after full actions occurs
-// mouseenter - moved onto an element
-// mouseleave - moved out of an element
+// keypress - when key is pressed
+// keydown - when key is down
+// keyup - when key is released
 
-const heading = document.querySelector("h1");
-const btn = document.querySelector(".btn");
+const nameInput = document.getElementById("name");
 
-btn.addEventListener("click", function () {
-  console.log("You are prayed");
-});
+// nameInput.addEventListener("keypress", function () {
+//   console.log("keypress");
+// });
 
-btn.addEventListener("mousedown", function () {
-  console.log("head down");
-});
+// nameInput.addEventListener("keydown", function () {
+//   console.log("keydown");
+// });
 
-btn.addEventListener("mouseup", function () {
-  console.log("hearts lifted up");
-});
-
-heading.addEventListener("mouseenter", function () {
-  heading.classList.add("blue");
-});
-
-heading.addEventListener("mouseleave", function () {
-  heading.classList.remove("blue");
+nameInput.addEventListener("keyup", function () {
+  // console.dir(nameInput);
+  console.log(nameInput.value);
 });
