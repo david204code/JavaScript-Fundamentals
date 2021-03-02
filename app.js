@@ -1,26 +1,15 @@
-// allows select dynamic elements
-// event propogation - order the events are fired
-// event bubbling - click element first then bubbles up -- default
+// submit event listener
+// prevent default
+// how to get a value
 
-const container = document.querySelector(".container");
-const btn = document.querySelector(".btn");
-// const heading = document.querySelector(".heading");
+const form = document.getElementById("form");
+const name = document.getElementById("name");
+const password = document.getElementById("password");
 
-function sayHello() {
-  console.log("grace and peace to you from God our Father and the Lord Jesus");
-}
-
-btn.addEventListener("click", function () {
-  const element = document.createElement("h1");
-  element.classList.add("heading");
-  element.textContent = `hope, love, glory, joy`;
-  container.appendChild(element);
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  console.log("Form submitted");
+  console.log(name.value);
+  console.log(password.value);
+  console.log(form);
 });
-
-container.addEventListener("click", function (e) {
-  if (e.target.classList.contains("heading")) {
-    console.log("hi David");
-  }
-});
-
-// heading.addEventListener("click", sayHello);
