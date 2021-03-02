@@ -1,27 +1,26 @@
 // allows select dynamic elements
 // event propogation - order the events are fired
-// event bubbling - clicked element first then bubbles up -- default
-// event capturing - fires at the root and fires until reaches target
+// event bubbling - click element first then bubbles up -- default
 
 const container = document.querySelector(".container");
-const list = document.querySelector(".list-items");
+const btn = document.querySelector(".btn");
+// const heading = document.querySelector(".heading");
 
-function showBubbling(e) {
-  console.log("currentTarget: ", e.currentTarget);
-  // console.log("target", e.target);
-  // if (e.target.classList.contains("link")) {
-  //   console.log("This is a link");
-  // }
+function sayHello() {
+  console.log("grace and peace to you from God our Father and the Lord Jesus");
 }
 
-// stop propogation
-function stopPropagantion(e) {
-  console.log("clicks on the list");
-  e.stopPropagation();
-}
+btn.addEventListener("click", function () {
+  const element = document.createElement("h1");
+  element.classList.add("heading");
+  element.textContent = `hope, love, glory, joy`;
+  container.appendChild(element);
+});
 
-// list.addEventListener("click", stopPropagantion);
-list.addEventListener("click", showBubbling, { capture: true });
-container.addEventListener("click", showBubbling, { capture: true });
-document.addEventListener("click", showBubbling, { capture: true });
-window.addEventListener("click", showBubbling, { capture: true });
+container.addEventListener("click", function (e) {
+  if (e.target.classList.contains("heading")) {
+    console.log("hi David");
+  }
+});
+
+// heading.addEventListener("click", sayHello);
