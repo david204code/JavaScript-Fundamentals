@@ -1,26 +1,14 @@
-// event object argument e,event
-// info about triggered event
-// event.type
-// event.currentTarget
-// this keyword
-// preventDefault() - prevents default behaviour
+// currentTarget - always refers to the element to which the event handler has been attached to
+// target - identifies the element on which the event occured
 
-const heading = document.querySelector("h1");
-const btn = document.querySelector(".btn");
-const link = document.getElementById("link");
+const btn = document.querySelectorAll(".btn");
 
-heading.addEventListener("click", function (event) {
-  // heading.classList.add("blue");
-  console.log(event.currentTarget);
-  console.log(this);
+btn.forEach(function (btn) {
+  btn.addEventListener("click", function (e) {
+    // console.log(e.currentTarget);
+    // e.currentTarget.style.color = "green";
+    console.log("currentTarget", e.currentTarget);
+    console.log("target", e.target);
+    e.target.style.color = "green";
+  });
 });
-
-btn.addEventListener("click", function (event) {
-  event.currentTarget.classList.add("blue");
-  console.log(event.type);
-});
-
-function example(e) {
-  e.preventDefault();
-}
-link.addEventListener("click", example);
